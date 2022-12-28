@@ -3,7 +3,7 @@ import { createElement } from 'react';
 import { useImageDiffScreenshots } from '../use-imagediff-screenshots';
 import { renderHook } from '@testing-library/react-hooks';
 import { useScreenshotImageDiffResults } from '../use-screenshot-imageDiff-results';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { StoryData } from '../../typings';
 import { ImageDiffResult } from '../../api/typings';
 

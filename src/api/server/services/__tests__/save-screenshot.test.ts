@@ -4,7 +4,7 @@ import { SaveScreenshotRequest } from '../../../typings';
 import { setConfig } from '../../configs';
 import { Page } from 'playwright';
 import * as diffImageToScreenshot from '../diff-image-to-screenshot';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { deleteScreenshot } from '../delete-screenshot';
 import { BrowserContextOptions } from '../../../../typings';
 import { saveStoryFile } from '../../utils';

@@ -3,7 +3,7 @@ import { ScreenshotMain } from '../ScreenshotMain';
 import { shallow } from 'enzyme';
 import { ScreenshotPanel } from '../ScreenshotPanel';
 import { useScreenshotUpdateState } from '../../../hooks/use-screenshot-update-state';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { MemoizedStoryScreenshotPreview } from '../StoryScreenshotPreview';
 
 jest.mock('../../../hooks/use-screenshot-update-state.ts');

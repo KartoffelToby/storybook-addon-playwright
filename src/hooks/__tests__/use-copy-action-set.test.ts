@@ -1,6 +1,6 @@
 import { dispatchMock } from '../../../__manual_mocks__/store/action/context';
 import { useCopyActionSet } from '../use-copy-action-set';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { useAsyncApiCall } from '../use-async-api-call';
 import { renderHook } from '@testing-library/react-hooks';
 import { StoryData } from '../../typings';

@@ -3,7 +3,7 @@ import { saveStoryFile } from '../../utils/save-story-file';
 import { fixScreenshotFileName } from '../fix-screenshot-file-name';
 import { getStoryPlaywrightDataByFileName } from '../utils/get-story-playwright-data-by-file-name';
 import fs from 'fs';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { PlaywrightData } from '../../../../typings';
 import { getStoryPlaywrightFileInfo } from '../../utils/get-story-playwright-file-info';
 

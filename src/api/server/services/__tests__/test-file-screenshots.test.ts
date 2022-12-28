@@ -9,7 +9,7 @@ jest.mock('fast-glob', () => ({
 
 import { testFileScreenshots } from '../test-file-screenshots';
 import { testStoryScreenshots } from '../test-story-screenshots';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { defaultConfigs } from '../../../../../__test_data__/configs';
 import { getConfigs } from '../../configs';
 

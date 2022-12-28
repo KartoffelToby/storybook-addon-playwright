@@ -1,6 +1,6 @@
 import { changeScreenshotIndex } from '../change-screenshot-index';
 import { saveStoryFile } from '../../utils';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../utils/load-story-data');
 jest.mock('../../utils/save-story-file');

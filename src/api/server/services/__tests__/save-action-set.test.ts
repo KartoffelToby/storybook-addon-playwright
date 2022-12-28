@@ -1,6 +1,6 @@
 import { saveStoryFile } from '../../utils';
 import { saveActionSet } from '../save-action-set';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../utils/save-story-file');
 jest.mock('../../utils/load-story-data');

@@ -5,7 +5,7 @@ import React from 'react';
 import { useScreenshotUpdate } from '../../../hooks/use-screenshot-update';
 import { ScreenshotListPreviewDialog } from '../ScreenshotListPreviewDialog';
 import { useImageDiffScreenshots } from '../../../hooks/use-imagediff-screenshots';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 import { StoryData, ScreenshotData } from '../../../typings';
 import {

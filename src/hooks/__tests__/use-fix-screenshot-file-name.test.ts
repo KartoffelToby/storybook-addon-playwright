@@ -1,5 +1,5 @@
 import { useFixScreenshotFileName } from '../use-fix-screenshot-file-name';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useAsyncApiCall } from '../use-async-api-call';
 import { useSnackbar } from '../../hooks/use-snackbar';

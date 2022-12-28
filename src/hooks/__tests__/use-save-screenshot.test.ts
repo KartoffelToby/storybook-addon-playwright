@@ -1,4 +1,4 @@
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { useEditScreenshot } from '../use-edit-screenshot';
 import { globalDispatchMock } from '../../../__manual_mocks__/hooks/use-global-screenshot-dispatch';
 import { useSaveScreenshot } from '../use-save-screenshot';

@@ -5,7 +5,7 @@ import { useCurrentStoryData } from '../use-current-story-data';
 import { StoryData } from '../../typings';
 import { useAddonState } from '../use-addon-state';
 import { useLoadScreenshotSettings } from '../use-load-screenshot-settings';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../use-global-action-dispatch');
 jest.mock('../use-current-story-data');

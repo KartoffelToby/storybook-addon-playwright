@@ -1,7 +1,7 @@
 import { useCurrentStoryData } from '../use-current-story-data';
 import { renderHook } from '@testing-library/react-hooks';
 import { useStorybookApi } from '@storybook/api';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 describe('useCurrentStoryData', () => {
   beforeEach(() => {

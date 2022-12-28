@@ -21,7 +21,7 @@ jest.mock('join-images', () => joinImagesMock);
 import { makeScreenshot } from '../make-screenshot';
 import { getConfigs } from '../../configs';
 import { defaultConfigs } from '../../../../../__test_data__/configs';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { executeAction } from '../../utils/execute-action';
 import { installMouseHelper } from '../../utils/install-mouse-helper';
 import { releaseModifierKey } from '../utils/release-modifier-Key';

@@ -1,4 +1,4 @@
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { testScreenshot as TestScreenshot } from '../test-screenshot';
 export const testScreenshot = jest.fn() as jest.Mocked<typeof TestScreenshot>;
 mocked(testScreenshot).mockImplementation(() => {

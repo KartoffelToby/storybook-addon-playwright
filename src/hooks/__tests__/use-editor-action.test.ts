@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useActionContext } from '../../store/actions/ActionContext';
 import { storyFileInfo } from '../../../__test_data__/story-file-info';
 import { getOrgEditingActionSet } from '../../../__test_data__/get-org-editing-actionSet';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { ReducerState } from '../../store/actions/reducer';
 
 jest.mock('../../store/actions/ActionContext');

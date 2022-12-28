@@ -9,7 +9,7 @@ import { act } from 'react-dom/test-utils';
 import { ImageDiffPreview } from '../../common';
 // import * as useKeyPressFn from '../../../hooks/use-key-press-fn';
 import { useKeyPressFn } from '../../../hooks/use-key-press-fn';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../../store/screenshot/context');
 jest.mock('../../../hooks/use-key-press-fn');

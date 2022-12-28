@@ -6,7 +6,7 @@ import { ActionSet } from '../../../typings';
 import { ActionSetEditorIconsProps } from '../ActionSetEditorIcons';
 import { ListItemWrapper, InputDialog, Snackbar } from '../../common';
 import { useActionEditor } from '../../../hooks/use-action-editor';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../../hooks/use-action-editor');
 

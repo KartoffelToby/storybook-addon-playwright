@@ -9,7 +9,7 @@ import { useGlobalImageDiffResults } from '../../../hooks/use-global-imageDiff-r
 import { ImageDiffResult } from '../../../api/typings';
 import { Menu, MenuItem } from '@material-ui/core';
 import { ImageDiffMenuItem } from '../ImageDiffMenuItem';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { useGlobalScreenshotDispatch } from '../../../hooks';
 import { useSnackbar } from '../../../hooks/use-snackbar';
 import { StoryData } from '../../../typings';

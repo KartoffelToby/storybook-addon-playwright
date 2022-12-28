@@ -1,7 +1,7 @@
 import { defaultConfigs } from '../../../../../__test_data__/configs';
 import { testScreenshots } from '../test-screenshots-service';
 import { getConfigs } from '../../configs';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { testFileScreenshots } from '../test-file-screenshots';
 
 jest.mock('../make-screenshot');

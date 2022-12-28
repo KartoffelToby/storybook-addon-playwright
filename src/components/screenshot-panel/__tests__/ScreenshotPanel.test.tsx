@@ -3,7 +3,7 @@ import { ScreenshotPanel } from '../ScreenshotPanel';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { useScreenshotDispatch } from '../../../store/screenshot/context';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { ScreenshotListToolbar } from '../ScreenshotListToolbar';
 import { StoryScreenshotPreview } from '../StoryScreenshotPreview';
 import mockConsole from 'jest-mock-console';

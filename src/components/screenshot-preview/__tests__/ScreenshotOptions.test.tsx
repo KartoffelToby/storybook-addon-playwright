@@ -2,7 +2,7 @@ import { ScreenshotOptions } from '../ScreenshotOptions';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { useScreenshotOptions } from '../../../hooks/use-screenshot-options';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { MemoizedSchemaFormLoader } from '../..';
 
 jest.mock('../../../hooks/use-screenshot-options.ts');

@@ -3,7 +3,7 @@ import { BrowserOptions } from '../BrowserOptions';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { useBrowserOptions } from '../../../hooks/use-browser-options';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { MemoizedSchemaFormLoader } from '../..';
 import { OptionPopover } from '../OptionPopover';
 

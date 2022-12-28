@@ -1,6 +1,6 @@
 import { testStoryScreenshots } from '../test-story-screenshots';
 import { getConfigs } from '../../configs';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { defaultConfigs } from '../../../../../__test_data__/configs';
 
 jest.mock('../make-screenshot');

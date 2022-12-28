@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import { getActionSchemaData } from '../../../../__test_data__/action-schema';
 import { MemoizedSchemaRenderer } from '../../schema';
 import { useEditorAction } from '../../../hooks/use-editor-action';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../../hooks/use-editor-action');
 jest.mock('../../../hooks/use-current-story-data.ts');

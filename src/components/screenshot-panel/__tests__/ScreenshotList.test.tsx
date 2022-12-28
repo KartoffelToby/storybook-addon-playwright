@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { SortableScreenshotListItem } from '../ScreenshotListItem';
 import { useScreenshotContext } from '../../../store/screenshot/context';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../../store/screenshot/context');
 jest.mock('../../../hooks/use-current-story-data');

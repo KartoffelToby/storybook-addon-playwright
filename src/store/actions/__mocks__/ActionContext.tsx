@@ -1,5 +1,5 @@
 import { getActionSchemaData } from '../../../../__test_data__';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { ReducerState } from '../../../../__manual_mocks__/store/action/context';
 
 export const useActionContext = jest.fn();

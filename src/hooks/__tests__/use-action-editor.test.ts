@@ -7,7 +7,7 @@ import { useActionEditor } from '../use-action-editor';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { ActionSet } from '../../typings';
 import { useAsyncApiCall } from '../use-async-api-call';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { validateActionList } from '../../utils/valid-action';
 import { useActionContext } from '../../store/actions/ActionContext';
 

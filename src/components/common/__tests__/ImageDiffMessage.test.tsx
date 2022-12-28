@@ -3,7 +3,7 @@ import '../../../../__manual_mocks__/react-useEffect';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { ImageDiffPreviewDialog } from '../ImageDiffPreviewDialog';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { useSnackbar } from '../../../hooks/use-snackbar';
 
 jest.mock('../../../hooks/use-snackbar');

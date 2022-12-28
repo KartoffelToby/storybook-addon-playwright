@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { IconButton } from '@storybook/components';
 import { useScreenshotUpdateState } from '../../../hooks/use-screenshot-update-state';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { Loader } from '../../common';
 
 jest.mock('../../../hooks/use-screenshot-update-state.ts');

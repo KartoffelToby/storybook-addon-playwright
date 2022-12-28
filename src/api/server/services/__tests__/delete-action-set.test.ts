@@ -1,7 +1,7 @@
 import { deleteActionSet } from '../delete-action-set';
 import { storyFileInfo } from '../../../../../__test_data__/story-file-info';
 import { saveStoryFile, loadStoryData } from '../../utils';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../utils/save-story-file');
 jest.mock('../../utils/load-story-data');

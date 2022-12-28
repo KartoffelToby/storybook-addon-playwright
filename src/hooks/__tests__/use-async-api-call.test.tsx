@@ -1,7 +1,7 @@
 import { useAsyncApiCall } from '../use-async-api-call';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useSnackbar } from '../../hooks/use-snackbar';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../hooks/use-snackbar');
 

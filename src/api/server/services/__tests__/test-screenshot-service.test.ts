@@ -1,6 +1,6 @@
 import { testScreenshotService } from '../test-screenshot-service';
 import { diffImageToScreenshot } from '../diff-image-to-screenshot';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { getConfigs } from '../../configs';
 import { defaultConfigs } from '../../../../../__test_data__/configs';
 import fs from 'fs';

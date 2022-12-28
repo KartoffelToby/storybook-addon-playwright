@@ -9,7 +9,7 @@ import fetch from 'jest-fetch-mock';
 import { SortableActionSetListItem } from '../ActionSetListItem';
 import { useStoryActionSetsLoader } from '../../../hooks/use-story-action-sets-loader';
 import { useCurrentStoryActionSets } from '../../../hooks/use-current-story-action-sets';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 
 jest.mock('../../../hooks/use-current-story-data');
 jest.mock('../../../hooks/use-story-action-sets-loader');

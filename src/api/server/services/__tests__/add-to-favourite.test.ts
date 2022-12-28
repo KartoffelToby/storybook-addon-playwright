@@ -1,7 +1,7 @@
 import { addToFavourite } from '../add-to-favourite';
 import fs from 'fs';
 import jsonfile from 'jsonfile';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { FavouriteActions } from '../../../typings/favourite-actions';
 import { FavouriteActionSet } from '../../../../typings';
 

@@ -6,7 +6,7 @@ import { getScreenshotDate } from '../../../../__test_data__/get-screenshot-date
 import { IconButton } from '@material-ui/core';
 import { testScreenshot } from '../../../api/client/test-screenshot';
 import { updateScreenshot } from '../../../api/client/update-screenshot';
-import { mocked } from 'ts-jest/utils';
+import { mocked } from 'jest-mock';
 import { ImageDiffPreviewDialog } from '../../common';
 
 jest.mock('../../../store/screenshot/context');
