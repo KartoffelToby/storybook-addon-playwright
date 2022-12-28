@@ -7,14 +7,14 @@ describe('getBoundingBox', () => {
     await expect(
       // @ts-ignore
       getBoundingBox(pagePropsMock(), '#invalid-selector'),
-    ).rejects.toThrowError('Unable to find selector!');
+    ).rejects.toThrow('Unable to find selector!');
   });
 
   it('should return rect', async () => {
     await expect(
       // @ts-ignore
       getBoundingBox(pagePropsMock(), '#selector-null'),
-    ).rejects.toThrowError('Unable to get boundingBox!');
+    ).rejects.toThrow('Unable to get boundingBox!');
   });
 
   it('should return bounding box', async () => {

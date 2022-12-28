@@ -24,7 +24,7 @@ describe('deleteActionSet', () => {
         fileName: 'story-file-name',
         storyId: 'story-id',
       }),
-    ).rejects.toThrowError();
+    ).rejects.toThrow();
   });
 
   it('should not call save if story id cannot be found', async () => {

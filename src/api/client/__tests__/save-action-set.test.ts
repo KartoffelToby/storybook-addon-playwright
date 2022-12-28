@@ -27,11 +27,11 @@ describe('saveActionSet', () => {
 
   it('should call successfully', async () => {
     fetch.mockResponseOnce(JSON.stringify({ success: true }));
-    await expect(() => saveActionSet(data)).not.toThrowError();
+    await expect(() => saveActionSet(data)).not.toThrow();
   });
 
   it('should throw error on server reject', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(saveActionSet(data)).rejects.toThrowError('foo');
+    await expect(saveActionSet(data)).rejects.toThrow('foo');
   });
 });

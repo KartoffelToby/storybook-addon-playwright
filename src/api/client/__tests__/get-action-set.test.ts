@@ -33,6 +33,6 @@ describe('getActionSet', () => {
 
   it('should throw error on server reject', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(getActionSet(data)).rejects.toThrowError('foo');
+    await expect(getActionSet(data)).rejects.toThrow('foo');
   });
 });

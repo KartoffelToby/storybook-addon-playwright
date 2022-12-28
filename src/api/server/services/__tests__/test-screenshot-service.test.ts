@@ -57,7 +57,7 @@ describe('testScreenshot', () => {
         screenshotId: 'screenshot-id',
         storyId: 'story-id-2',
       }),
-    ).rejects.toThrowError('Unable to find screenshot data.');
+    ).rejects.toThrow('Unable to find screenshot data.');
   });
 
   it('should handle exceptions', async () => {

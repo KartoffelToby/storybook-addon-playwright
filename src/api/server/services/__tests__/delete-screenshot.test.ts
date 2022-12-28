@@ -75,6 +75,6 @@ describe('deleteScreenshot', () => {
       mocked(saveStoryFile).mock.calls[0][1].stories['story-id'].screenshots,
     ).toStrictEqual(undefined);
 
-    expect(unlinkSyncMock).toBeCalledTimes(1);
+    expect(unlinkSyncMock).toHaveBeenCalledTimes(1);
   });
 });

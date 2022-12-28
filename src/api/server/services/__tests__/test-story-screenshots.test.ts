@@ -82,7 +82,7 @@ describe('testStoryScreenshot', () => {
         requestId: 'request-id',
         storyId: 'story-id-2',
       }),
-    ).rejects.toThrowError('Unable to find story screenshots');
+    ).rejects.toThrow('Unable to find story screenshots');
   });
 
   it('should call afterAllImageDiff with result', async () => {

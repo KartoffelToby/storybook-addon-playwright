@@ -24,7 +24,7 @@ describe('responseHandler', () => {
       ok: false,
     };
 
-    await expect(responseHandler(res)).rejects.toThrowError('foo');
+    await expect(responseHandler(res)).rejects.toThrow('foo');
   });
 
   it('should not throw if received invalid json', async () => {

@@ -25,6 +25,6 @@ describe('getThemeData', () => {
 
   it('should throw error', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(getThemeData()).rejects.toThrowError('foo');
+    await expect(getThemeData()).rejects.toThrow('foo');
   });
 });

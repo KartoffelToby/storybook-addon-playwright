@@ -32,6 +32,6 @@ describe('getFavouriteActions', () => {
 
   it('should throw error on server reject', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(getFavouriteActions()).rejects.toThrowError('foo');
+    await expect(getFavouriteActions()).rejects.toThrow('foo');
   });
 });

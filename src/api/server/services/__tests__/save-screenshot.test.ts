@@ -114,13 +114,13 @@ describe('saveScreenshot', () => {
 
     await expect(
       saveScreenshot(getData({ title: 'foo' })),
-    ).rejects.toThrowError();
+    ).rejects.toThrow();
   });
 
   it('should not have screenshot with the same setting', async () => {
     await expect(
       saveScreenshot(getData({ id: 'screenshot-id-3', title: 'tets-title' })),
-    ).rejects.toThrowError();
+    ).rejects.toThrow();
   });
 
   it('should not save if dealing with existing screenshot', async () => {

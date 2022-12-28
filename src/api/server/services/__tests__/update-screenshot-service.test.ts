@@ -31,6 +31,6 @@ describe('updateScreenshot', () => {
         screenshotId: 'invalid-screenshot-id',
         storyId: 'story-id',
       }),
-    ).rejects.toThrowError('Unable to find screenshot data.');
+    ).rejects.toThrow('Unable to find screenshot data.');
   });
 });

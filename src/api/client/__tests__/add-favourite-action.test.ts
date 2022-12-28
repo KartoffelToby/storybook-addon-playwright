@@ -24,11 +24,11 @@ describe('addFavouriteAction', () => {
 
   it('should call successfully', async () => {
     fetch.mockResponseOnce(JSON.stringify({ success: true }));
-    await expect(() => addFavouriteAction(actionSet)).not.toThrowError();
+    await expect(() => addFavouriteAction(actionSet)).not.toThrow();
   });
 
   it('should throw error on server reject', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(addFavouriteAction(actionSet)).rejects.toThrowError('foo');
+    await expect(addFavouriteAction(actionSet)).rejects.toThrow('foo');
   });
 });

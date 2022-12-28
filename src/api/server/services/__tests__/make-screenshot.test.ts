@@ -88,7 +88,7 @@ describe('makeScreenshot', () => {
         requestId: 'request-id',
         storyId: 'story-id',
       }),
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       'Make sure to return an instance of a page from getPage.',
     );
   });
@@ -147,7 +147,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(executeAction).toBeCalledTimes(1);
+    expect(executeAction).toHaveBeenCalledTimes(1);
   });
 
   it('should call beforeSnapshotMock', async () => {
@@ -168,7 +168,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(beforeSnapshotMock).toBeCalledTimes(1);
+    expect(beforeSnapshotMock).toHaveBeenCalledTimes(1);
   });
 
   it('should call afterSnapshot', async () => {
@@ -188,7 +188,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(afterSnapshotMock).toBeCalledTimes(1);
+    expect(afterSnapshotMock).toHaveBeenCalledTimes(1);
   });
 
   it('should call afterUrlConstruction', async () => {
@@ -208,7 +208,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(afterUrlConstructionMock).toBeCalledTimes(1);
+    expect(afterUrlConstructionMock).toHaveBeenCalledTimes(1);
   });
 
   it('should call afterNavigation', async () => {
@@ -228,7 +228,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(afterNavigation).toBeCalledTimes(1);
+    expect(afterNavigation).toHaveBeenCalledTimes(1);
   });
 
   it('should install mouse helper', async () => {
@@ -243,7 +243,7 @@ describe('makeScreenshot', () => {
       },
       true,
     );
-    expect(installMouseHelper).toBeCalledTimes(1);
+    expect(installMouseHelper).toHaveBeenCalledTimes(1);
   });
 
   it('should take 2 screenshots with stitch as default merge process', async () => {
@@ -279,7 +279,7 @@ describe('makeScreenshot', () => {
     );
 
     expect(joinImagesMock).toHaveBeenCalledTimes(1);
-    expect(screenshotMock).toBeCalledTimes(2);
+    expect(screenshotMock).toHaveBeenCalledTimes(2);
   });
 
   it('should take 2 screenshots with stitch for merge process', async () => {
@@ -322,7 +322,7 @@ describe('makeScreenshot', () => {
       ['buffer-data', 'buffer-data'],
       {},
     );
-    expect(screenshotMock).toBeCalledTimes(2);
+    expect(screenshotMock).toHaveBeenCalledTimes(2);
   });
 
   it('should overwrite takeScreenshotOptions by takeScreenshot options when overlay merging', async () => {

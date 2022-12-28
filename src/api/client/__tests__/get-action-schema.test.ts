@@ -15,6 +15,6 @@ describe('getActionSchema', () => {
 
   it('should throw error', async () => {
     fetch.mockReject(new Error('foo'));
-    await expect(getActionSchema()).rejects.toThrowError('foo');
+    await expect(getActionSchema()).rejects.toThrow('foo');
   });
 });

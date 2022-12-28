@@ -20,4 +20,5 @@
       "relativePath": "coverage/lcov-report/index.html"
     }
   ],
+  "typescript.tsdk": "node_modules/typescript/lib",
 }

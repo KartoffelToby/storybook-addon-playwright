@@ -94,7 +94,7 @@ describe('getActionArgs', () => {
 
     expect(() => {
       getActionArgs(action, getActionSchemaData());
-    }).toThrowError(
+    }).toThrow(
       `Unable to find 'mouse.deprecated', possibly this action has deprecated/removed from playwright and or from custom definitions.`,
     );
   });
