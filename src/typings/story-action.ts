@@ -1,5 +1,8 @@
 import { Page } from 'playwright';
+import { KnobType } from '@storybook/addon-knobs/dist/components/types';
 export type StoryActionPosition = { x: number; y: number };
+
+export type ControlTypes = KnobType;
 
 export interface StoryAction<T = Page> {
   id: string;

@@ -1,6 +1,7 @@
 import React, { memo, ComponentType } from 'react';
 import { ControlProps } from '../../typings';
 import { FormControl } from './FormControl';
+import { useControl } from '../../hooks';
 
 const Control: React.FC<ControlProps & Partial<ComponentType>> = memo(
   (props) => {
@@ -13,6 +14,8 @@ const Control: React.FC<ControlProps & Partial<ComponentType>> = memo(
       value,
       defaultValue,
     } = props;
+
+    const { Control: StorybookControl, handleChange, knob } = useControl(props);
 
     return (
       <FormControl
@@ -28,6 +31,7 @@ const Control: React.FC<ControlProps & Partial<ComponentType>> = memo(
           value !== false
         }
       >
+        <StorybookControl onChange={handleChange} knob={knob} required />
       </FormControl>
     );
   },

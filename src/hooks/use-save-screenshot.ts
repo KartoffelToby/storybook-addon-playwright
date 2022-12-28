@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { useKnobs } from './use-knobs';
 import { useCurrentActions } from './use-current-actions';
 import { useCurrentStoryData } from './use-current-story-data';
 import { saveScreenshot as saveScreenshotClient } from '../api/client';
@@ -11,6 +12,7 @@ import { useScreenshotOptions } from './use-screenshot-options';
 import { nanoid } from 'nanoid';
 
 export const useSaveScreenshot = () => {
+  const props = useKnobs();
 
   const { screenshotOptions } = useScreenshotOptions();
 
@@ -64,6 +66,7 @@ export const useSaveScreenshot = () => {
         browserType,
         fileName: storyData.parameters.fileName,
         id: nanoid(12),
+        props: props,
         screenshotOptions:
           screenshotOptions && Object.keys(screenshotOptions).length
             ? screenshotOptions
@@ -101,6 +104,7 @@ export const useSaveScreenshot = () => {
     },
     [
       currentActions,
+      props,
       screenshotOptions,
       storyData,
       isUpdating,
