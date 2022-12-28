@@ -2,7 +2,7 @@ import { useGlobalActionDispatch } from './use-global-action-dispatch';
 import { useStorybookApi } from '@storybook/api';
 import { useCallback } from 'react';
 import { ScreenshotData, ScreenshotOptions } from '../typings';
-import { RESET, CHANGE } from '@storybook/addon-knobs/dist/shared';
+import { STORY_RENDERED, STORY_CHANGED } from '@storybook/core-events';
 import { useCurrentStoryData } from './use-current-story-data';
 import { useBrowserOptions, BrowsersOption } from './use-browser-options';
 import { useScreenshotOptions } from './use-screenshot-options';
@@ -38,10 +38,10 @@ export const useLoadScreenshotSettings = (): ReturnType => {
   );
   const loadSetting = useCallback(
     (screenshotData: ScreenshotData, force = false) => {
-      api.emit(RESET);
+      api.emit(STORY_RENDERED);
       if (screenshotData.props && Object.keys(screenshotData.props).length) {
         Object.keys(screenshotData.props).forEach((prop) => {
-          api.emit(CHANGE, { name: prop, value: screenshotData.props[prop] });
+          api.emit(STORY_CHANGED, { name: prop, value: screenshotData.props[prop] });
         });
       }
       dispatchActions(screenshotData);

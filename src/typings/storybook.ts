@@ -1,4 +1,3 @@
-// import { StoriesRaw } from '@storybook/api/dist/modules/stories';
 
 export type StoryData = {
   id: string;
@@ -8,8 +7,6 @@ export type StoryData = {
   parameters: {
     fileName: string;
     options: {
-      // hierarchyRootSeparator: RegExp;
-      // hierarchySeparator: RegExp;
       showRoots?: boolean;
       [key: string]: unknown | undefined;
     };

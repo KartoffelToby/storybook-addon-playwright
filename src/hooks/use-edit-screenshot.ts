@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { useCurrentStoryData } from './use-current-story-data';
 import { useStorybookApi } from '@storybook/api';
 import { useGlobalActionDispatch } from './use-global-action-dispatch';
-import { RESET } from '@storybook/addon-knobs/dist/shared.js';
+import { STORY_CHANGED } from '@storybook/core-events';
 import { useActiveBrowsers } from './use-active-browser';
 import { useLoadScreenshotSettings } from './use-load-screenshot-settings';
 import { useAddonState } from './use-addon-state';
@@ -46,7 +46,7 @@ export const useEditScreenshot = () => {
       type: 'clearCurrentActionSets',
     });
 
-    api.emit(RESET);
+    api.emit(STORY_CHANGED);
 
     if (editScreenshotState) {
       loadSetting(

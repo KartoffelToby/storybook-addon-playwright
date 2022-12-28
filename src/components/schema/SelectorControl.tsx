@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useState, useEffect } from 'react';
 import { makeStyles, IconButton } from '@material-ui/core';
 import { ControlProps } from '../../typings';
-import { useControl, useSelectorManager, SelectorType } from '../../hooks';
+import { useSelectorManager, SelectorType } from '../../hooks';
 import { FormControl } from './FormControl';
 import TargetIcon from '@material-ui/icons/FilterCenterFocusSharp';
 import { isValidSelector } from '../../utils';
@@ -68,8 +68,6 @@ const SelectorControl: React.FC<SelectorControlProps> = memo((props) => {
 
   const { startSelector } = useSelectorManager();
 
-  const { Control, knob, handleChange, setKnob } = useControl(props);
-
   const handleSelectorClick = useCallback(() => {
     setValidate(false);
     startSelector({
@@ -84,8 +82,8 @@ const SelectorControl: React.FC<SelectorControlProps> = memo((props) => {
           onSelectorChange(objPath + `x`, data.x);
           onSelectorChange(objPath + `y`, data.y);
         } else {
+          // @ts-expect-error TODO: fix this
           const key = label === 'top' ? 'y' : label === 'left' ? 'x' : label;
-          handleChange(data[key]);
         }
       },
       type: selectorType,
@@ -97,7 +95,6 @@ const SelectorControl: React.FC<SelectorControlProps> = memo((props) => {
     onSelectorChange,
     fullObjectPath,
     label,
-    handleChange,
   ]);
 
   useEffect(() => {
@@ -108,21 +105,6 @@ const SelectorControl: React.FC<SelectorControlProps> = memo((props) => {
 
     setInvalidSelector(!isValidSelector(value as string));
   }, [selectorType, validate, value]);
-
-  useEffect(() => {
-    if (knob.defaultValue !== value) {
-      handleChange(value);
-      setKnob({ ...knob, defaultValue: value, value });
-    }
-  }, [handleChange, knob, setKnob, value]);
-
-  const handleControlChange = useCallback(
-    (value: string) => {
-      setValidate(true);
-      handleChange(value);
-    },
-    [handleChange],
-  );
 
   const handleBlur = useCallback(
     (e: React.FocusEvent<HTMLDivElement>) =>
@@ -144,7 +126,6 @@ const SelectorControl: React.FC<SelectorControlProps> = memo((props) => {
         })}
         onBlur={handleBlur}
       >
-        <Control onChange={handleControlChange} knob={knob} required />
         <div
           className={clsx({ [classes.buttonWrap]: isFollowedByPositionProp })}
         >

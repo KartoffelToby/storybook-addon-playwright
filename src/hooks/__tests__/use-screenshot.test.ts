@@ -3,12 +3,6 @@ import { renderHook } from '@testing-library/react-hooks';
 import fetch from 'jest-fetch-mock';
 import { GetScreenshotResponse } from '../../api/typings';
 
-jest.mock('../use-knobs', () => ({
-  useKnobs: () => {
-    return undefined;
-  },
-}));
-
 jest.mock('../../utils/get-iframe.ts');
 
 describe('useScreenshot', () => {

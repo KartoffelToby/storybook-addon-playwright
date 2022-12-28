@@ -46,7 +46,7 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
-    "@storybook/addon-knobs": "^6.4.0",
+    "@storybook/addon-controls": "6.4.13",
     "@storybook/react": "^6.4.13",
     "@testing-library/react-hooks": "^7.0.2",
     "@tippyjs/react": "^4.2.0",
@@ -96,12 +96,12 @@
   "scripts": {
     "start:storybook": "start-storybook -p 9002 --ci --no-manager-cache",
     "clean": "rimraf coverage dist/* tmp",
-    "build": "npm run clean && tsc -p tsconfig.release.json",
+    "build": "yarn clean && tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepublish": "npm run lint && npm run build"
+    "prepublish": "yarn lint && yarn build"
   },
   "license": "MIT",
   "dependencies": {
@@ -133,7 +133,7 @@
     "object-hash": "^2.0.3",
     "object-path-immutable": "^4.1.1",
     "p-limit": "3.1.0",
-    "playwright": "~1.17.2",
+    "playwright": "1.29.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-json-view": "^1.19.1",
@@ -150,5 +150,6 @@
   },
   "storybook": {
     "displayName": "Playwright"
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }

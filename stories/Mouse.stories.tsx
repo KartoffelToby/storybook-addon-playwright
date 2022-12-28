@@ -1,23 +1,25 @@
 import React, { useState, useCallback } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import Draggable from 'react-draggable';
 
 export default {
-  decorators: [withKnobs],
   title: 'Mouse',
 };
 
-export const WithTippy = () => {
+export const WithTippy = ({disabled, label}) => {
   return (
     <Tippy content="Tippy.js" placement="bottom-start">
-      <button disabled={boolean('Disabled', false)}>
-        {text('Label', 'Hello Storybook')}
+      <button disabled={disabled}>
+        {label}
       </button>
     </Tippy>
   );
 };
+WithTippy.args = {
+  disabled: false,
+  label: 'Hello Storybook',
+}
 
 export const WithInput = () => {
   const [val, setVal] = useState('Hi');

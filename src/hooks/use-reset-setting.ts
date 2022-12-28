@@ -1,4 +1,4 @@
-import { RESET } from '@storybook/addon-knobs/dist/shared';
+import { STORY_CHANGED } from '@storybook/core-events';
 import { useStorybookApi } from '@storybook/api';
 import { useGlobalActionDispatch } from './use-global-action-dispatch';
 import { useCurrentStoryData } from './use-current-story-data';
@@ -11,7 +11,7 @@ export const useResetSetting = () => {
   const data = useCurrentStoryData();
 
   const reset = () => {
-    api.emit(RESET);
+    api.emit(STORY_CHANGED);
     dispatch({ type: 'clearCurrentActionSets' });
     dispatch({ storyId: data.id, type: 'deleteTempActionSets' });
   };

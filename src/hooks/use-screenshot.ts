@@ -1,5 +1,4 @@
 import { useCallback, useRef, useEffect } from 'react';
-import { useKnobs } from './use-knobs';
 import { useStorybookState } from '@storybook/api';
 import { getScreenshot } from '../api/client';
 import { BrowserTypes, BrowserContextOptions } from '../typings';
@@ -14,7 +13,6 @@ export const useScreenshot = (
   browserType: BrowserTypes | 'storybook',
   browserOptions?: BrowserContextOptions,
 ) => {
-  const knobs = useKnobs();
 
   const state = useStorybookState();
 
@@ -34,7 +32,6 @@ export const useScreenshot = (
       actionSets: currentActions,
       browserOptions,
       browserType,
-      props: knobs,
       requestId: nanoid(),
       screenshotOptions,
       storyId: state.storyId,
@@ -43,7 +40,6 @@ export const useScreenshot = (
     browserType,
     currentActions,
     browserOptions,
-    knobs,
     makeCall,
     screenshotOptions,
     state.storyId,
@@ -67,7 +63,6 @@ export const useScreenshot = (
       browserOptions,
       currentActions,
       id: state.storyId,
-      knobs,
       latHotReload,
       screenshotOptions,
     });
@@ -82,7 +77,6 @@ export const useScreenshot = (
   }, [
     currentActions,
     getSnapshot,
-    knobs,
     browserOptions,
     state.storyId,
     screenshotOptions,
