@@ -1,6 +1,6 @@
 import { ScreenshotData } from '../../typings';
 import { ImageDiffResult } from '../../api/typings';
-import arrayMove from 'array-move';
+import { arrayMove } from 'react-sortable-hoc';
 
 export interface ReducerState {
   screenshots: ScreenshotData[];

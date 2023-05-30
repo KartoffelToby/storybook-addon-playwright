@@ -1,4 +1,4 @@
-import arrayMove from 'array-move';
+import { arrayMove } from 'react-sortable-hoc';
 import { ChangeScreenshotIndex } from '../../typings';
 import {
   getStoryPlaywrightFileInfo,

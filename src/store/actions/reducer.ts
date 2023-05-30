@@ -5,7 +5,7 @@ import {
   ActionSet,
 } from '../../typings';
 import * as immutableObject from 'object-path-immutable';
-import arrayMove from 'array-move';
+import { arrayMove } from 'react-sortable-hoc';
 import { combineReducers } from '../../utils';
 import { nanoid } from 'nanoid';
 import { isSameActions } from './utils';

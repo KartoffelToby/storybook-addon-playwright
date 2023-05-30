@@ -97,22 +97,6 @@ const SchemaProp: React.FC<SchemaPropProps> = ({
 
   switch (schema.type) {
     case 'string':
-    case 'any':
-      return (
-        <Control
-          label={name}
-          type="text"
-          onChange={handleChange}
-          value={value}
-          description={schema.description}
-          onAppendValueToTitle={
-            onAppendValueToTitle && handleOnAppendValueToTitle
-          }
-          appendValueToTitle={appendToTile}
-          isRequired={isRequired}
-          defaultValue={schema.default}
-        />
-      );
     case 'number':
     case 'integer':
       return (
@@ -193,7 +177,21 @@ const SchemaProp: React.FC<SchemaPropProps> = ({
         </div>
       );
     default:
-      return null;
+      return (
+        <Control
+          label={name}
+          type="text"
+          onChange={handleChange}
+          value={value}
+          description={schema.description}
+          onAppendValueToTitle={
+            onAppendValueToTitle && handleOnAppendValueToTitle
+          }
+          appendValueToTitle={appendToTile}
+          isRequired={isRequired}
+          defaultValue={schema.default}
+        />
+      );
   }
 };
 

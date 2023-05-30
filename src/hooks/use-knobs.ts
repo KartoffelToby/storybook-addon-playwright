@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SET } from '@storybook/addon-knobs/dist/shared';
 import { ScreenshotProp } from '../typings';
 import { STORY_CHANGED } from '@storybook/core-events';
-import addons from '@storybook/addons';
+import { addons } from '@storybook/preview-api';
 
 export const useKnobs = () => {
   const [props, setProps] = useState<ScreenshotProp>();
