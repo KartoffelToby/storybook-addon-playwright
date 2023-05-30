@@ -97,12 +97,12 @@
   "scripts": {
     "start:storybook": "start-storybook -p 9002 --ci --no-manager-cache",
     "clean": "rimraf coverage dist/* tmp",
-    "build": "npm clean && tsc -p tsconfig.release.json",
+    "build": "npm run clean && tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
-    "lint": "npm eslint . --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepublish": "npm lint && npm build"
+    "prepublish": "npm run lint && npm run build"
   },
   "license": "MIT",
   "dependencies": {
